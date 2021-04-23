@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
-import { ButtonThemes, ButtonTypes } from '../constants/buttonProperties';
-import { StyleProperties, TypeToStyle } from '../constants/styleProperties';
+import { StyleProperties, TypeToStyle } from '../config/styleProperties';
 
 const documentStyleObject = document.documentElement.style;
 
