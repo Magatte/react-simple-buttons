@@ -28,4 +28,46 @@ describe('Button', () => {
 
         expect(component).toHaveStyleRule('text-transform', 'uppercase');
     })
+
+    test('Should have default green background', () => {
+        const { container } = render(<Button label='We salute you' />);
+        const component = getByText(container, 'We salute you');
+
+        expect(component).toHaveStyleRule('background', '#5cdb95');
+    })
+
+    test('Should have explicit green background when type is primary', () => {
+        const { container } = render(<Button label='We salute you' type='primary' />);
+        const component = getByText(container, 'We salute you');
+
+        expect(component).toHaveStyleRule('background', '#5cdb95');
+    })
+
+    test('Should have explicit red background when type is secondary', () => {
+        const { container } = render(<Button label='We salute you' type='secondary' />);
+        const component =  getByText(container, 'We salute you');
+
+        expect(component).toHaveStyleRule('background', '#d86262')
+    })
+
+    test('Should have dark blue color when default type', () => {
+        const { container } = render(<Button label='We salute you' />);
+        const component = getByText(container, 'We salute you');
+
+        expect(component).toHaveStyleRule('color', '#05385b');
+    })
+
+    test('Should have dark blue color when type is primary', () => {
+        const { container } = render(<Button label='We salute you' type='primary' />);
+        const component = getByText(container, 'We salute you');
+
+        expect(component).toHaveStyleRule('color', '#05385b');
+    })
+
+    test('Should have white color when type is secondary', () => {
+        const { container } = render(<Button label='We salute you' type='secondary' />);
+        const component =  getByText(container, 'We salute you');
+
+        expect(component).toHaveStyleRule('color', '#fff')
+    })
 });
