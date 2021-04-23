@@ -4,12 +4,6 @@ export const ButtonTypes = Object.freeze({
     TERTIARY: 'tertiary'
 });
 
-export const ButtonSizes = Object.freeze({
-    SMALL: 'small',
-    MEDIUM: 'medium',
-    LARGE: 'large'
-});
-
 export const ButtonThemes = Object.freeze({
     DARK: 'dark',
     LIGHT: 'light'
